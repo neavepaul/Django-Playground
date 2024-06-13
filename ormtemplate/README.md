@@ -1,4 +1,23 @@
-# Standalone Django ORM App Setup and Testing
+# Standalone Django ORM App
+
+## Prerequisite
+
+### Set the password in `settings.py`
+
+Example:
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'your_database_name',
+        'USER': 'your_database_user',
+        'PASSWORD': 'your_generated_password',
+        'HOST': 'localhost',
+        'PORT': '5050',
+    }
+}
+```
 
 ## Step 1: Define a Simple Test Model
 
@@ -35,7 +54,7 @@ source djangoenv/bin/activate
 ### Install Required Packages
 
 ```sh
-pip install django==4.2.4 psycopg2-binary==2.9.7
+pip install django psycopg2-binary
 ```
 
 ### Generate Migration Scripts for the Standalone App
